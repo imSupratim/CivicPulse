@@ -42,7 +42,7 @@ const Home = () => {
 
         <Show when="signed-out">
           
-            <SignInButton mode="modal" className="cursor-pointer bg-white w-1/10 px-3 py-2 text-black font-bold rounded-2xl" />
+            <SignInButton mode="modal" />
           
         </Show>
       </section>
