@@ -1,4 +1,5 @@
 //server side rendered compononent
+export const dynamic = "force-dynamic";
 
 import ProblemCard from "../../../components/ProblemCard.jsx";
 import { ConnectDB } from "../../../lib/ConnectDB.js";

@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { auth } from "@clerk/nextjs/server";
 import { ConnectDB } from "@/lib/ConnectDB";
 import Problem from "@/lib/models/Problem";
