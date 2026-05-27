@@ -154,7 +154,7 @@ export default function PostForm() {
         Upload Photo
       </label>
 
-      {/* <input
+      <input
         type="file"
         id="fileUpload"
         className="hidden"
@@ -169,40 +169,9 @@ export default function PostForm() {
       >
         <span className="text-3xl mb-2">📸</span>
         <span className="text-gray-600 text-sm">Click to upload an image</span>
-      </label> */}
+      </label>
 
-      <input
-        type="file"
-        id="cameraUpload"
-        className="hidden"
-        accept="image/*"
-        capture="environment"
-        onChange={handleFileUpload}
-      />
-
-      <input
-        type="file"
-        id="galleryUpload"
-        className="hidden"
-        accept="image/*"
-        onChange={handleFileUpload}
-      />
-
-      <div className="flex gap-3">
-        <label
-          htmlFor="cameraUpload"
-          className="flex-1 text-center bg-blue-500 text-white py-2 rounded-xl cursor-pointer"
-        >
-          📸 Camera
-        </label>
-
-        <label
-          htmlFor="galleryUpload"
-          className="flex-1 text-center bg-gray-500 text-white py-2 rounded-xl cursor-pointer"
-        >
-          🖼️ Gallery
-        </label>
-      </div>
+      
 
       {/* Preview */}
       {image && (
@@ -210,7 +179,7 @@ export default function PostForm() {
           <img
             src={image}
             alt="preview"
-            className="w-full h-40 object-cover rounded-xl shadow"
+            className="w-full h-70 object-cover rounded-xl shadow"
           />
         </div>
       )}
