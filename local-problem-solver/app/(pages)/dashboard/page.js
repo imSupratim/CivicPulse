@@ -7,6 +7,7 @@ import Problem from "../../../lib/models/Problem.js";
 const dashboard = async () => {
   await ConnectDB();
   const problems = await Problem.find().sort({ updatedAt: -1 }).lean();
+  console.log(problems);
   const formatted = problems.map((p) => ({
     ...p,
     _id: p._id.toString(),
