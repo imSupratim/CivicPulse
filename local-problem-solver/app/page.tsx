@@ -40,11 +40,11 @@ const Home = () => {
           </div>
         </Show>
 
-        <Show when="signed-out">
-          
+        <div className="bg-gray-50 px-2 py-1 text-black rounded-2xl">
+          <Show when="signed-out">
             <SignInButton mode="modal" />
-          
-        </Show>
+          </Show>
+        </div>
       </section>
 
       {/* 🚀 FEATURES SECTION */}
@@ -84,7 +84,9 @@ const Home = () => {
               key={i}
               className="backdrop-blur-md p-6 rounded-2xl shadow-md hover:shadow-lg transition"
             >
-              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+              <h3 className="text-xl font-semibold text-white mb-2">
+                {feature.title}
+              </h3>
               <p className="text-white">{feature.desc}</p>
             </div>
           ))}
@@ -106,7 +108,9 @@ const Home = () => {
           </div>
 
           <div className="backdrop-blur-md px-2 py-4 rounded-2xl">
-            <h3 className="text-xl text-white font-semibold mb-2">2️⃣ Analyze</h3>
+            <h3 className="text-xl text-white font-semibold mb-2">
+              2️⃣ Analyze
+            </h3>
             <p className="text-white">
               AI categorizes the problem and assigns urgency automatically.
             </p>

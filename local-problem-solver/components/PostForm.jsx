@@ -97,7 +97,7 @@ export default function PostForm() {
   return (
     <form
   onSubmit={handleSubmit}
-  className="w-4/5 mx-auto mt-18 bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden"
+  className="w-4/5 mx-auto mt-18 bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden text-black"
 >
   {/* Header */}
   <div className="bg-linear-to-r from-blue-600 to-indigo-600 px-6 py-4">
