@@ -15,7 +15,7 @@ const dashboard = async () => {
     updatedAt: p.updatedAt?.toISOString(),
   }));
   return (
-    <div className="p-6 mt-14 min-w-screen mx-auto">
+    <div className="p-6 mt-14  min-w-screen mx-auto">
       <h1 className="text-2xl font-bold mb-6 flex gap-1 items-center ">
         <img
           src="https://images.vexels.com/media/users/3/205965/isolated/preview/746864a197dde979ee1a73548317f1f0-clipboard-paper-stroke-icon.png"

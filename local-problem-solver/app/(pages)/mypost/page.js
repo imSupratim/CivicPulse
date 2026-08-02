@@ -6,7 +6,6 @@ import Problem from "@/lib/models/Problem";
 import ProblemCard from "@/components/ProblemCard";
 
 export default async function MyPostsPage() {
-
   const { userId } = await auth();
 
   console.log(userId);
@@ -33,7 +32,14 @@ export default async function MyPostsPage() {
 
   return (
     <div className="mt-14 p-5 min-w-screen mx-auto">
-      <h1 className="text-2xl font-bold mb-6">👤 My Posts</h1>
+      <h1 className="text-2xl font-bold mb-6 flex gap-2 items-center">
+        <img
+          className="size-6 rounded-2xl"
+          src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA0L3BmLWljb240LWppcjIwNjItcG9yLWwtam9iNzg4LnBuZw.png"
+          alt="user"
+        />{" "}
+        <span>My Posts</span>
+      </h1>
 
       {formatted.length === 0 ? (
         <p className="text-gray-500">You haven’t posted anything yet.</p>
