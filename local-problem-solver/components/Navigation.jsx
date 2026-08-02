@@ -10,7 +10,6 @@
 // import { usePathname } from "next/navigation";
 // import React from "react";
 
-
 // const Navigation = () => {
 //   const pathname = usePathname();
 
@@ -70,12 +69,7 @@
 
 "use client";
 
-import {
-  Show,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-} from "@clerk/nextjs";
+import { Show, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
@@ -130,8 +124,10 @@ const Navigation = () => {
           </Show>
 
           <Show when="signed-out">
-            <SignInButton mode="modal" />
-            <SignUpButton />
+            <div className="text-black font-bold flex gap-5">
+              <SignInButton mode="modal" />
+              <SignUpButton />
+            </div>
           </Show>
         </div>
 
@@ -155,10 +151,7 @@ const Navigation = () => {
 
             <div className="flex items-center gap-2 pt-2 border-t">
               <UserButton />
-              <Link
-                href="/user-profile"
-                className="font-bold text-black"
-              >
+              <Link href="/user-profile" className="font-bold text-black">
                 Profile
               </Link>
             </div>

@@ -41,9 +41,11 @@ const Home = () => {
         </Show>
 
        
-          <Show when="signed-out">
+        <Show when="signed-out">
+          <div className="text-xl bg-white text-black px-2 py-1 rounded-2xl font-bold cursor-pointer">
             <SignInButton mode="modal" />
-          </Show>
+          </div>
+         </Show>
   
       </section>
 
