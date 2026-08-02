@@ -25,16 +25,16 @@ const page = async (props) => {
   console.log(isAuthor);
 
   return (
-    <div className="w-2/3 mx-auto mt-20 p-6  bg-white shadow-lg rounded-xl">
+    <div className="mx-3 mb-7 md:mx-25 mt-20 p-6  bg-white shadow-lg rounded-xl">
       {/* Title */}
-      <h1 className="text-2xl text-black font-bold mb-3">{problem.title}</h1>
+      <h1 className="text-xl md:text-2xl text-black font-bold mb-3">{problem.title}</h1>
 
       {problem.imageURL && (
         <a href={problem.imageURL} target="_blank">
           <img
           src={problem.imageURL}
           alt="problem"
-          className="w-full h-100 object-cover rounded-xl mb-3"
+          className="w-full h-45 md:h-100 object-cover rounded-xl mb-3"
         />
         </a>
       )}
@@ -103,11 +103,11 @@ const page = async (props) => {
         Updated: {new Date(problem.updatedAt).toLocaleString()}
       </p>
 
-      <div className="p-5">
+      <div className="py-3 flex justify-end md:px-4">
         {isAuthor && (
           <Link
             href={`/problems/${problem._id}/edit`}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700"
+            className="bg-blue-600 font-bold text flex items-center text-white px-4 py-3 rounded-lg text-sm hover:bg-blue-700"
           >
             ✏️ Edit
           </Link>

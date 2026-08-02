@@ -9,7 +9,7 @@
 
     return (
       <Link href={`/specific_problem_page/${problem._id}`} className="block">
-        <div className="relative bg-white text-black p-5 rounded-2xl shadow-md hover:shadow-xl transition border border-gray-200 h-130 flex flex-col justify-between">
+        <div className="relative bg-white text-black p-5 rounded-2xl shadow-md hover:shadow-xl transition border border-gray-200 md:h-130 flex flex-col justify-between">
           {/* Title */}
           <h2 className="text-lg font-semibold mb-1 line-clamp-1">
             {problem.title}
