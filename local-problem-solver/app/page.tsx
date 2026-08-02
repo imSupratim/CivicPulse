@@ -40,11 +40,11 @@ const Home = () => {
           </div>
         </Show>
 
-        <div className="bg-gray-50 px-2 py-1 text-black rounded-2xl">
+       
           <Show when="signed-out">
             <SignInButton mode="modal" />
           </Show>
-        </div>
+  
       </section>
 
       {/* 🚀 FEATURES SECTION */}
