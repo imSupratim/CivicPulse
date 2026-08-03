@@ -106,9 +106,9 @@ const page = async (props) => {
         Updated: {new Date(problem.updatedAt).toLocaleString()}
       </p>
 
-      <div className="py-3 flex justify-end md:px-4">
+      <div className="py-3 mt-4 bg-gray-300 px-7 py-3 rounded-2xl flex justify-end md:px-4">
         {isAuthor && (
-          <div className="flex gap-4 ">
+          <div className="flex gap-4">
             <Link
               href={`/problems/${problem._id}/edit`}
               className="bg-blue-600 font-bold text flex items-center text-white px-4 py-3 rounded-lg text-sm hover:bg-blue-700"
