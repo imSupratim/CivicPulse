@@ -3,6 +3,7 @@ import { ConnectDB } from "../../../../lib/ConnectDB.js";
 import Problem from "../../../../lib/models/Problem.js";
 import Link from "next/link.js";
 import { auth } from "@clerk/nextjs/server";
+import DeleteButton from "../../../../components/DeleteButton.jsx";
 
 const page = async (props) => {
   const Params = await props.params;
@@ -27,15 +28,17 @@ const page = async (props) => {
   return (
     <div className="mx-3 mb-7 md:mx-25 mt-20 p-6  bg-white shadow-lg rounded-xl">
       {/* Title */}
-      <h1 className="text-xl md:text-2xl text-black font-bold mb-3">{problem.title}</h1>
+      <h1 className="text-xl md:text-2xl text-black font-bold mb-3">
+        {problem.title}
+      </h1>
 
       {problem.imageURL && (
         <a href={problem.imageURL} target="_blank">
           <img
-          src={problem.imageURL}
-          alt="problem"
-          className="w-full h-45 md:h-100 object-cover rounded-xl mb-3"
-        />
+            src={problem.imageURL}
+            alt="problem"
+            className="w-full h-45 md:h-100 object-cover rounded-xl mb-3"
+          />
         </a>
       )}
 
@@ -105,12 +108,16 @@ const page = async (props) => {
 
       <div className="py-3 flex justify-end md:px-4">
         {isAuthor && (
-          <Link
-            href={`/problems/${problem._id}/edit`}
-            className="bg-blue-600 font-bold text flex items-center text-white px-4 py-3 rounded-lg text-sm hover:bg-blue-700"
-          >
-            ✏️ Edit
-          </Link>
+          <div className="flex gap-4 ">
+            <Link
+              href={`/problems/${problem._id}/edit`}
+              className="bg-blue-600 font-bold text flex items-center text-white px-4 py-3 rounded-lg text-sm hover:bg-blue-700"
+            >
+              ✏️ Edit
+            </Link>
+
+            <DeleteButton problemId={problem._id.toString()}/>
+          </div>
         )}
       </div>
     </div>

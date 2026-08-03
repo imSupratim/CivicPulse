@@ -24,7 +24,7 @@ const page = async (props) => {
     return <div className="min-h-screen min-w-screen flex justify-center items-center text-red-600 text-3xl">You are not the author of this article you cannot change it !!</div>
   }
 
-  // ✅ server action
+  
   async function updateProblem(formData) {
     "use server";
 
@@ -47,7 +47,7 @@ const page = async (props) => {
     <div className="w-5/6 text-black mx-auto mt-20 bg-white p-6 rounded-xl shadow">
       <h1 className="text-xl font-bold mb-4">Edit Problem</h1>
 
-      {/* ✅ No useState, no useEffect */}
+      
       <form action={updateProblem} className="flex flex-col gap-3">
         <input
           name="title"
