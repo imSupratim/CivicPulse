@@ -147,7 +147,7 @@ const Home = () => {
 
       {/* 📌 FOOTER */}
       <footer className="text-center py-6 text-gray-500 text-sm bg-black/90">
-        © 2026 Local Problem Solver. Built with ❤️ by Supratim Mandal
+        © 2026 CivicPulse. Built with ❤️ by Supratim Mandal
       </footer>
     </div>
   );
