@@ -106,7 +106,7 @@ export default function PostForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="md:w-4/5 w-full mt-14 md:mt-18 bg-white md:rounded-3xl shadow-xl border border-gray-100 overflow-hidden text-black"
+      className="md:w-4/5 w-full mt-14 md:mt-18 bg-white md:rounded-3xl shadow-xl  overflow-hidden text-black"
     >
       {/* Header */}
       <div className={`transition-colors duration-[1500ms] ease-in-out ${isPageLoaded ? 'bg-black text-white': `bg-white text-black`} px-6 py-4`}>

@@ -26,14 +26,14 @@ const Home = () => {
           <div className="flex gap-4">
             <Link
               href="/post"
-              className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
+              className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-black hover:text-white transition"
             >
               Report a Problem
             </Link>
 
             <Link
               href="/dashboard"
-              className="border border-white px-6 py-3 rounded-full hover:bg-white hover:text-blue-600 transition"
+              className="border font-bold border-white hover:border-black px-6 py-3 rounded-full hover:bg-black transition"
             >
               View Problems
             </Link>
@@ -139,7 +139,7 @@ const Home = () => {
 
         <Link
           href="/post"
-          className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition"
+          className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-black hover:text-white transition"
         >
           Get Started
         </Link>

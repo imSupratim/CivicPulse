@@ -28,7 +28,7 @@ const page = async (props) => {
   return (
     <div className="mx-3 mb-7 md:mx-25 mt-20 p-6  bg-white shadow-lg rounded-xl">
       {/* Title */}
-      <h1 className="text-xl md:text-2xl text-black font-bold mb-3">
+      <h1 className="text-xl md:text-2xl mb-5 bg-gray-300 px-6 py-3 rounded-2xl shadow-xl text-black font-bold mb-3">
         {problem.title}
       </h1>
 
@@ -43,16 +43,16 @@ const page = async (props) => {
       )}
 
       {/* Description */}
-      <p className="text-gray-700 mb-4">{problem.description}</p>
+      <p className="text-gray-700 mb-4 bg-gray-200 p-3 rounded-2xl shadow">{problem.description}</p>
 
       {/* Category & Urgency */}
       <div className="flex gap-2 mb-4">
-        <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm">
+        <span className="bg-blue-100 hover:scale-110 hover:shadow-2xl transition ease-in-out  text-blue-600 px-3 py-1 rounded-full text-sm">
           {problem.category}
         </span>
 
         <span
-          className={`px-3 py-1 rounded-full text-sm ${
+          className={`px-3 py-1 hover:scale-110 hover:shadow-2xl transition ease-in-out  rounded-full text-sm ${
             problem.urgency === "high"
               ? "bg-red-100 text-red-600"
               : problem.urgency === "medium"
@@ -63,14 +63,14 @@ const page = async (props) => {
           {problem.urgency}
         </span>
 
-        <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">
+        <span className="bg-gray-100 hover:scale-110 hover:shadow-2xl transition ease-in-out  text-gray-600 px-3 py-1 rounded-full text-sm">
           {problem.status}
         </span>
       </div>
 
       {/* AI Summary */}
       {problem.summary && (
-        <p className="italic text-gray-500 mb-4">🤖 {problem.summary}</p>
+        <p className="italic text-gray-600 mb-4 hover:scale-101 transition ease-in-out hover:shadow-2xl  bg-gray-200 py-3 px-2 rounded-2xl shadow "><span className="font-bold text-black">✧ AI Summary: </span> {problem.summary}</p>
       )}
 
       {/* Location */}
@@ -106,14 +106,14 @@ const page = async (props) => {
         Updated: {new Date(problem.updatedAt).toLocaleString()}
       </p>
 
-      <div className="py-3 mt-4 bg-gray-300 px-7 py-3 rounded-2xl flex justify-end md:px-4">
+      <div className="py-3 mt-4 bg-gray-200 px-7 py-3 rounded-2xl flex justify-end md:px-4">
         {isAuthor && (
           <div className="flex gap-4">
             <Link
               href={`/problems/${problem._id}/edit`}
-              className="bg-blue-600 font-bold text flex items-center text-white px-4 py-3 rounded-lg text-sm hover:bg-blue-700"
+              className="bg-blue-500 font-bold text flex items-center text-white px-4 py-3 rounded-lg text-sm hover:bg-blue-700 hover:scale-105 hover:shadow-2xl transition ease-in-out"
             >
-              ✏️ Edit
+              ✎﹏ Edit
             </Link>
 
             <DeleteButton problemId={problem._id.toString()}/>

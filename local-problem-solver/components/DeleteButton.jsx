@@ -29,7 +29,7 @@ export default function DeleteButton({ problemId }) {
   return (
     <button
       onClick={handleDelete}
-      className="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-3 rounded-lg transition"
+      className="bg-red-600 cursor-pointer hover:bg-red-700 text-white font-semibold px-4 py-3 rounded-lg hover:scale-105 hover:shadow-2xl transition ease-in-out"
     >
       🗑 Delete
     </button>
