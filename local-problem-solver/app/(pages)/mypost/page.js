@@ -31,7 +31,7 @@ export default async function MyPostsPage() {
   }));
 
   return (
-    <div className="mt-14 p-5 min-w-screen mx-auto bg-gradient-to-b from-gray-600">
+    <div className="mt-14 p-5 min-w-screen mx-auto bg-gradient-to-b from-gray-600 via-gray-600 to-bg-black">
       <h1 className="text-2xl font-bold mb-6 flex gap-2 items-center">
         <img
           className="size-6 rounded-2xl"
